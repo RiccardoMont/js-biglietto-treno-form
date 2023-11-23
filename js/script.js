@@ -30,13 +30,13 @@ generatore.addEventListener('click', function() {
     } else {
         console.log('erroreCompilazione');
     }
-/*
-    console.log(nome);
-    console.log('eccolo');
-    console.log(km);
-    console.log(ticketprice);
-    console.log(age);*/
 
 }
 )
 
+const cancellatore = document.getElementById('cancella');
+
+cancellatore.addEventListener('click', function(){
+    const myForm = document.getElementById('myForm');
+    myForm.reset();
+})
