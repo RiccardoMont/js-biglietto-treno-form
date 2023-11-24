@@ -34,14 +34,14 @@ generatore.addEventListener('click', function () {
             const youngprice = (Math.round((ticketprice * 0.8) * 100) / 100).toFixed(2);
             console.log(youngprice);
             offerta.innerHTML = 'Biglietto junior';
-            costo.innerHTML = `${youngprice}`;
+            costo.innerHTML = `${youngprice}€`;
 
 
         } else if (age == 'Maggiorenne') {
 
             console.log(ticketprice);
             offerta.innerHTML = 'Biglietto standard';
-            costo.innerHTML = `${ticketprice}`;
+            costo.innerHTML = `${ticketprice}€`;
 
 
         } else if (age == '65+') {
@@ -49,7 +49,7 @@ generatore.addEventListener('click', function () {
             const elderprice = (Math.round((ticketprice * 0.6) * 100) / 100).toFixed(2);
             console.log(elderprice);
             offerta.innerHTML = 'Biglietto senior';
-            costo.innerHTML = `${elderprice}`;
+            costo.innerHTML = `${elderprice}€`;
 
         } else {
 
