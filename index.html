@@ -8,15 +8,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<body class="font-monospace">
+<body class="font-monospace bg-warning">
     <div class="container">
     <header>
-        <h3 class="">Treniscript</h3>
+        <h3 class="fw-bold">Treniscript</h3>
     </header>
     <main>
-        <div class="row d-flex justify-content-evenly align-items-center">
-            <div class="card py-3 text-center gap-5">
-                <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+        <div class="row d-flex justify-content-evenly align-items-center gap-5">
+            <div class="card py-3 text-center gap-5 bg-warning-subtle">
+                <h3>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h3>
                 <form id="myForm" class="d-flex">
                     <div class="col-4">
                         <h4>Nome e cognome</h4>
@@ -27,7 +27,7 @@
                         <input type="text" id="km" placeholder="850">
                     </div>
                     <div class="col-4">
-                        <h4>Fascia d'età</h4>
+                        <h4>Età</h4>
                         <select name="età" id="fasce">
                             <option value="Minorenne">Minorenne</option>
                             <option value="Maggiorenne">Maggiorenne</option>
@@ -35,36 +35,30 @@
                         </select>
                     </div>
                 </form>
-                <div class="bottoni">
-                    <button id="genera">Genera</button>
-                    <button id="cancella">Cancella</button>
+                <div class="bottoni d-flex justify-content-evenly">
+                    <button class="btn btn-warning" id="genera">Genera</button>
+                    <button class="btn btn-warning" id="cancella">Cancella</button>
                 </div>
             </div>
-            <div class="card biglietto text-center d-none">
+            <div class="card biglietto text-center d-none bg-warning-subtle py-3">
                 <h2>IL TUO BIGLIETTO</h2>
-                <h3 class="text-start">DETTAGLIO PASSEGGERI</h3>
-                <div class="d-flex">
-                <div class="col-4">
-                    <h3 class="text-start">NOME PASSEGGERO</h3>
-                    <span class="text-start" id="nomePasseggero"></span>
-                </div>
-                <div class="col-2">
-                    <h4>Offerta</h4>
-                    <span id="offerta"></span>
-                </div>
-                <div class="col-2">
-                    <h4>Carrozza</h4>
-                    <span id="carrozza"></span>
-                </div>
-                <div class="col-2">
-                    <h4>Codice CP</h4>
-                    <span id="codice"></span>
-                </div>
-                <div class="col-2">
-                    <h4>Costo biglietto</h4>
-                    <span id="costo"></span>
-                </div>
-                </div>
+                <h4 class="text-start">DETTAGLIO PASSEGGERI</h4>
+                <table>
+                    <tr class="">
+                        <th class="text-start border-bottom border-black">NOME PASSEGGERO</th>
+                        <th>OFFERTA</th>
+                        <th class="border-bottom border-black">CARROZZA</th>
+                        <th>CODICE CP</th>
+                        <th class="border-bottom border-black">COSTO BIGLIETTO</th>
+                    </tr>
+                    <tr>
+                        <td class="text-start" id="nomePasseggero"></td>
+                        <td class="border-bottom border-black" id="offerta"></td>
+                        <td id="carrozza"></td>
+                        <td class="border-bottom border-black" id="codice"></td>
+                        <td id="costo"></td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
